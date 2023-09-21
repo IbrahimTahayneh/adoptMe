@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Nav style */
+  .nav {
+    @apply flex justify-between items-center mb-8;
+  }
+  .nav > div {
+    @apply flex items-center;
+  }
+
+  .nav > div > *:nth-child(2) {
+    @apply ml-40 font-semibold text-base flex;
+  }
+  .nav > div > *:nth-child(2) > * {
+    color: #515151;
+    text-decoration: none;
+    margin-right: 4em;
+  }
+  .logo {
+    @apply text-niagara font-black text-3xl no-underline font-poppins;
+  }
+
+  .logo > div {
+    @apply flex items-center;
+  }
+  .logo img {
+    @apply w-6 mr-2 bottom-1 relative;
+  }
+  /* ...Loading */
+  .cover {
+    @apply w-full h-full bg-[#ffffff] fixed flex justify-center items-center z-10 inset-0;
+  }
+  .loading {
+    @apply block w-20 h-20 mx-auto my-8 rounded-[50%] border-t-[#e5e4e2] animate-spin border-[3px]  border-solid;
+  }
+
+  /* SortButton styles */
+  .button-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-group > * {
+    border-radius: 0;
+    padding: 0.6em;
+    font-size: 0.95em;
+    border: #3aab97 solid 0.1em;
+    color: #3aab97;
+    border-right: none;
+  }
+
+  .button-group > *:hover {
+    background: #3aab97;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .selected {
+    background: #3aab97;
+    color: #fff;
+  }
+
+  .button-group > *:first-child {
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    padding-left: 1em;
+  }
+
+  .button-group > *:last-child {
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-right: #3aab97 solid 0.1em;
+    padding-right: 1em;
+  }
+  /* Control Component Styles */
+  .control {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.4em;
+    flex-grow: 0;
+  }
+
+  .control > span {
+    margin-left: 1em;
+    padding: 0.5em 0.8em;
+    border-radius: 0.2em;
+    font-weight: 700;
+    font-size: 0.8em;
+    border: #3aab97 solid 0.1em;
+    color: #fff;
+    background: #3aab97;
+  }
+
+  .control > span:hover {
+    cursor: pointer;
+  }
+
+  div span.show {
+    background: #fff;
+    color: #3aab97;
+  }
+}
